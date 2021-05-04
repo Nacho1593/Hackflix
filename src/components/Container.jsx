@@ -4,6 +4,7 @@ import StarRatings from "react-star-ratings";
 
 import "./Container.css";
 import axios from "axios";
+// import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Container() {
   const [moviesDB, setMoviesDB] = useState([]);
@@ -11,6 +12,9 @@ export default function Container() {
   const [page, setPage] = useState(1);
   const [rating, setRating] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+
+  // const [scrollMovies, setScrollMovies] = useState([]);
+  // const [hasMoreItems, setHasMoreItems] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -27,6 +31,19 @@ export default function Container() {
     getMovies();
   }, [page]);
 
+  // useEffect(() => {
+  //   if (!title || title === "") {
+  //     setMoviesFilter([...moviesDB]);
+  //   } else {
+  //     setMoviesFilter([
+  //       ...moviesDB.filter((movie) => {
+  //         return movie.title
+  //           .toLocaleLowerCase()
+  //           .includes(title.toLocaleLowerCase());
+  //       }),
+  //     ]);
+  //   }
+  // }, [moviesDB]);
   const changeRating = (newRating, name) => {
     setRating(newRating);
   };
@@ -52,10 +69,25 @@ export default function Container() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, /*[]*/);
+  }, []);
 
   const items = new Array(20).fill(0);
 
+  // const fetchMoreData = () => {
+  //   const URL = `https://api.themoviedb.org/3/discover/movie?api_key=d642bd58a979e66291e9b7f9e47e1923&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`;
+  //   const getMovies = async () => {
+  //     try {
+  //       const response = await axios.get(URL);
+  //       setScrollMovies([...scrollMovies, ...response.data.results]);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   getMovies();
+  //   setPage((page) => page + 1);
+  //   console.log(scrollMovies);
+  //   console.log(page);
+  // };
   return (
     <div className="container">
       <div className="text-center my-3">
@@ -88,6 +120,21 @@ export default function Container() {
             </div>
           ))}
       </div>
+      {/* <InfiniteScroll
+        dataLength={page}
+        next={fetchMoreData}
+        hasMore={true}
+        loader={<h4>Loading...</h4>}
+      >
+        <div className="row">
+          {scrollMovies.map((movie) => (
+            <Movie key={movie.id} movie={movie} />
+            // <div key={index}>
+            //   {index} - #{i.title}
+            // </div>
+          ))}
+        </div>
+      </InfiniteScroll> */}
     </div>
   );
 }

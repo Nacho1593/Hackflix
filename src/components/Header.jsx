@@ -1,8 +1,9 @@
 import React from "react";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
+  // const [title, setTitle] = React.useState();
   return (
     <div className="header">
       <div className="d-flex justify-content-between">
@@ -42,6 +43,13 @@ export default function Header() {
           El sitio donde podras encontrar todas tus peliculas favoritas en un
           solo lugar y a un solo click
         </p>
+        {/* <input
+          className="input-control my-3"
+          type="text"
+          // value={title}
+          onChange={(event) => getTitle(event.target.value)}
+          placeholder="Ingrese titulo de una pelicula..."
+        /> */}
       </div>
     </div>
   );

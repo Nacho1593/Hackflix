@@ -1,6 +1,16 @@
 import { Button, Modal } from "react-bootstrap";
 
 export default function MovieModal({ movie, show, setShow }) {
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = (e) => {
+  //   const selectedId = e.target.getAttribute("data-id");
+  //   const selectedMovie = moviesFilter.find(
+  //     (movie) => Number(selectedId) === movie.id
+  //   );
+  //   setModalMovie({ ...selectedMovie });
+  //   setShow(true);
+  // };
   return (
     <div>
       <Modal

@@ -9,6 +9,7 @@ function Search() {
   const [movies, setMovies] = useState([]);
   const [title, setTitle] = useState("");
 
+  // const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     const urlAllMovies = `https://api.themoviedb.org/3/discover/movie?api_key=d642bd58a979e66291e9b7f9e47e1923&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${1}`;
@@ -24,7 +25,7 @@ function Search() {
         response.data.results.length
           ? setMovies([...response.data.results])
           : setMovies([]);
-       
+        // : setErrorMessage("No hay peliculas con esas caracteristicas");
       } catch (error) {
         console.error(error);
       }
@@ -56,3 +57,4 @@ function Search() {
 }
 
 export default Search;
+
