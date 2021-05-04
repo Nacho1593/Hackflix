@@ -1,0 +1,25 @@
+.movie img {
+  max-width: 90%;
+  /* height: 250px; */
+  object-fit: cover;
+  transition: transform 0.4s;
+  border-radius: 0.5rem;
+}
+.movie .img-movie:hover {
+  transform: scale(1.1);
+}
+
+.modal img {
+  max-width: 90%;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.modal-title {
+  width: 100vw;
+}
+
+.modal .bg-secondary {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+}

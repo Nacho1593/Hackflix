@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.header {
+  background-image: url(/src/media/pop6.1704e67c.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  height: 350px;
+  object-fit: none;
+}
+.header h1 {
+  color: #000;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+.header:after {
+  content: "";
+  height: 30px;
+  width: 100%;
+  background: transparent url(/src/media/curveWhiteGrey.e2a407b1.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 320px;
+}
+#searchBox {
+  margin-top: -12rem;
+  margin-bottom: 12rem;
+}
+#searchBox input {
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+.movie img {
+  max-width: 90%;
+  object-fit: cover;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  border-radius: 0.5rem;
+}
+.movie .img-movie:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.modal img {
+  max-width: 90%;
+  height: 25rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+.modal-title {
+  width: 100vw;
+}
+.modal .bg-secondary {
+  width: 100%;
+  padding: 1rem 0;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  height: 3rem;
+  bottom: 0;
+  width: 100%;
+}

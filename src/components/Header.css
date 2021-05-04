@@ -1,0 +1,17 @@
+.header {
+  background-image: url("../media/movie-theater_107791-3670.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 350px;
+  object-fit: none;
+}
+
+.header h1 {
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
