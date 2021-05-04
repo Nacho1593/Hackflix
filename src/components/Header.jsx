@@ -8,33 +8,26 @@ export default function Header() {
     <div className="header">
       <div className="d-flex justify-content-between">
         <div className="text-white mx-4 mt-3">
-          <h6>
-            <a href="/" className="text-decoration-none text-white">
-              Hackflix
-            </a>
-          </h6>
+          <Link to="/" className="text-decoration-none text-white">
+            Hackflix
+          </Link>
         </div>
         <div className="text-white d-flex justify-content-between mx-4 mt-3">
-          <h6 className="me-3">
-            <a href="/" className="text-decoration-none text-white">
-              Home
-            </a>
-          </h6>
-          <h6 className="ms-3">
-            <a href="/search" className="text-decoration-none text-white">
-              Search
-            </a>
-          </h6>
-          <h6 className="ms-3">
-            <a href="/about" className="text-decoration-none text-white">
-              About
-            </a>
-          </h6>
-          <h6 className="ms-3">
-            <a href="/contact" className="text-decoration-none text-white">
-              Contact
-            </a>
-          </h6>
+          <Link to="/" className="text-decoration-none text-white">
+            Home
+          </Link>
+
+          <Link to="/search" className="text-decoration-none text-white">
+            Search
+          </Link>
+
+          <Link to="/about" className="text-decoration-none text-white">
+            About
+          </Link>
+
+          <Link to="/contact" className="text-decoration-none text-white">
+            Contact
+          </Link>
         </div>
       </div>
       <div className="text-white text-center mt-4">

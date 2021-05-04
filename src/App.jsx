@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Search from "./components/Search";
@@ -42,8 +42,8 @@ function App() {
   // }
   return (
     <div>
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route
             exact
@@ -57,9 +57,9 @@ function App() {
               />
             )}
           />
-          <Route  path="/search" component={Search} />
-          <Route  path="/about" component={About} />
-          <Route  path="/contact" component={Contact} />
+          <Route path="/search" component={Search} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
           <Route path="/" component={PageNotFound} />
         </Switch>
       </Router>
