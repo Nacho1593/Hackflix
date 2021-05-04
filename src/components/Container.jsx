@@ -31,19 +31,6 @@ export default function Container() {
     getMovies();
   }, [page]);
 
-  // useEffect(() => {
-  //   if (!title || title === "") {
-  //     setMoviesFilter([...moviesDB]);
-  //   } else {
-  //     setMoviesFilter([
-  //       ...moviesDB.filter((movie) => {
-  //         return movie.title
-  //           .toLocaleLowerCase()
-  //           .includes(title.toLocaleLowerCase());
-  //       }),
-  //     ]);
-  //   }
-  // }, [moviesDB]);
   const changeRating = (newRating, name) => {
     setRating(newRating);
   };
@@ -73,21 +60,6 @@ export default function Container() {
 
   const items = new Array(20).fill(0);
 
-  // const fetchMoreData = () => {
-  //   const URL = `https://api.themoviedb.org/3/discover/movie?api_key=d642bd58a979e66291e9b7f9e47e1923&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`;
-  //   const getMovies = async () => {
-  //     try {
-  //       const response = await axios.get(URL);
-  //       setScrollMovies([...scrollMovies, ...response.data.results]);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   getMovies();
-  //   setPage((page) => page + 1);
-  //   console.log(scrollMovies);
-  //   console.log(page);
-  // };
   return (
     <div className="container">
       <div className="text-center my-3">

@@ -57,76 +57,12 @@ function App() {
               />
             )}
           />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
+          <Route  path="/search" component={Search} />
+          <Route  path="/about" component={About} />
+          <Route  path="/contact" component={Contact} />
           <Route path="/" component={PageNotFound} />
-
-          {/* <Route
-            exact
-            path="/signin"
-            render={() =>
-              this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignOut />
-            }
-          />
-          <Route exact path="/checkout" component={CheckoutPage} /> */}
         </Switch>
       </Router>
-      {/* <Search title={title} />
-      {/* <div className="text-center my-3">
-        Filtrar por rating:
-        <StarRatings
-          rating={rating}
-          starRatedColor="orange"
-          starHoverColor="orange"
-          changeRating={changeRating}
-          numberOfStars={5}
-          name="rating"
-          starDimension="2rem"
-          starSpacing="0.1rem"
-        />
-      </div> */}
-      {/* funciona */}
-      {/* <Container
-        className="mb-2"
-        title={title}
-        rating={rating}
-        active={active}
-        setActive={setActive}
-      /> */}
-      {/* <div className="d-flex justify-content-center"> */}
-      {/* <Pagination onClick={handlePageClick}>{items}</Pagination> */}
-      {/* <ReactPaginate
-          previousLabel={"previous"}
-          nextLabel={"next"}
-          breakLabel={"..."}
-          breakClassName={"break-me"}
-          pageCount={500}
-          marginPagesDisplayed={3}
-          pageRangeDisplayed={5}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination"}
-          activeClassName={"active"}
-        /> */}
-
-      {/* <Pagination> */}
-      {/* <Pagination.First />
-          <Pagination.Prev />
-          <Pagination.Item>{1}</Pagination.Item>
-          <Pagination.Ellipsis />
-
-          <Pagination.Item>{10}</Pagination.Item>
-          <Pagination.Item>{11}</Pagination.Item>
-          <Pagination.Item active>{12}</Pagination.Item>
-          <Pagination.Item>{13}</Pagination.Item>
-          <Pagination.Item>{14}</Pagination.Item>
-
-          <Pagination.Ellipsis />
-          <Pagination.Item>{20}</Pagination.Item>
-          <Pagination.Next />
-          <Pagination.Last /> */}
-      {/* </Pagination> */}
-      {/* </div> */}
     </div>
   );
 }
