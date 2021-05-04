@@ -9,9 +9,10 @@
   object-fit: none;
 }
 
-.header h1 {
+.header a {
   color: black;
   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  /* -webkit-text-stroke-color: black; */
+  padding-left: 1rem;
 }
