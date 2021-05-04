@@ -6,8 +6,8 @@ export default function Footer() {
       <footer className="footer bg-light text-center text-lg-start">
         <div className="text-center p-3">
           © 2020 Copyright:
-          <a className="text-dark ms-1 text-decoration-none" href="#">
-            Hackflix by Sebastian Ferreira
+          <a className="text-dark ms-1 text-decoration-none" href="https://www.google.com.uy/">
+            Hackflix
           </a>
         </div>
       </footer>
