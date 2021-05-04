@@ -52,7 +52,7 @@ export default function Container() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, /*[]*/);
 
   const items = new Array(20).fill(0);
 
